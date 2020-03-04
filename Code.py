@@ -55,6 +55,7 @@ class SentimentAnalysis:
             elif (analysis.sentiment.polarity > -1 and analysis.sentiment.polarity <= -0.6):
                 stronglynegative += 1
                 csvWriter2.writerow(self.tweetText)
+                
         csvFile.close()
         csvFile1.close()
         csvFile2.close()
@@ -227,4 +228,3 @@ if __name__== "__main__":
     button = Button(master, text = 'exit', width = 50, command = master.destroy)
     button.grid(row = 2,column = 1)
     mainloop()
-
